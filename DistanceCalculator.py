@@ -55,7 +55,7 @@ def createPath(costSurfaceArray,startCoord,stopCoord):
 def calculateDistance(pathIndices):
     distance = 0
     for i in range(0,(len(pathIndices[0])-1)):
-        distance += vincenty((pathIndices[1,i], pathIndices[0,i]), (pathIndices[1,i+1], pathIndices[0,i+1])).miles*0.868976
+        distance += vincenty((pathIndices[0,i], pathIndices[1,i]), (pathIndices[0,i+1], pathIndices[1,i+1])).miles*0.868976
     return distance
 
 
